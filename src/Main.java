@@ -4,15 +4,15 @@ public class Main {
     public static void main(String[] args) {
 
      /*   List Node 사용 */
-        ListNode l1 = new ListNode(4);
+        ListNode l1 = new ListNode(1);
         System.out.println(l1.val);
         System.out.println(l1.next);
 
-        l1.next = new ListNode(2, l1);
+        l1.next = new ListNode(4, l1);
         System.out.println(l1.val);
         System.out.println(l1.next.val);
 
-        l1.next = new ListNode(1, l1.next);
+        l1.next = new ListNode(2, l1.next);
         System.out.println(l1.val);
         System.out.println(l1.next.val);
 

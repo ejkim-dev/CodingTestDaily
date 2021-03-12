@@ -16,31 +16,16 @@ import java.util.Arrays;
 public class Test210312 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
-        ListNode result = new ListNode();
+        ListNode head = new ListNode(l1.val);
 
-        /*while (l1 != null && l2 != null) {
+        //첫번째 위치의 노드가 필요하다. temp 노드를 생성한다.
+        ListNode temp = new ListNode(0);
+        temp.next = head; // next 변수가 첫번째 노드를 가르키면 됨
 
-            if (l1.val <= l2.val) {
-                result.next = new ListNode(l1.val);
-                result = result.next;
-                l1 = l1.next;
-            } else {
-                result.next = new ListNode(l2.val);
-                result = result.next;
-                l2 = l2.next;
-            }
+        head =temp;//temp 노드를 head가 가르키게함. 그럼 temp 노드가 첫번째 노드가 됨
 
-        }
 
-        if (l1 != null) {
-            result.next = l1;
-        }
-
-        if (l2 != null) {
-            result.next = l2;
-        }*/
-
-        return l1;
+        return head.next;
     }
 }
 
